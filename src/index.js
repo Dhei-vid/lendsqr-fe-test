@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './fonts/AvenirNextLTPro-Regular.otf'
+import './fonts/Metropolis-Medium.otf'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
