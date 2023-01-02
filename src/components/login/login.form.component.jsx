@@ -23,27 +23,36 @@ const Login = () => {
 
   return (
     <div className='login-container'>
-      <div className='left-half'></div>
+      <div className='logo'>
+        <img
+          src='/lendsqr-fe-test/src/assets/lendsqr_logo_nbg.png'
+          alt='logo'
+        />
+      </div>
 
-      <div className='right-half'>
-        <h2> Welcome!</h2>
-        <p>Enter details to login.</p>
-        <form>
-          <input type='text' placeholder='Email' name='email' />
-          <div className='passwordField'>
-            <input
-              type={showPassword ? 'text' : 'password'}
-              name='password'
-              placeholder='Password'
-              onChange={onChangeHandler}
-            />
-            <span className='password-cta' onClick={toggleShowPassword}>
-              Show
-            </span>
-          </div>
-          <span>Forgot password?</span>
-          <Button children={`Log in`} onSubmit={handleSubmit} />
-        </form>
+      <div className='login-body-container'>
+        <div className='left-half'></div>
+
+        <div className='right-half'>
+          <h2> Welcome!</h2>
+          <p>Enter details to login.</p>
+          <form>
+            <input type='text' placeholder='Email' name='email' />
+            <div className='passwordField'>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name='password'
+                placeholder='Password'
+                onChange={onChangeHandler}
+              />
+              <span className='password-cta' onClick={toggleShowPassword}>
+                Show
+              </span>
+            </div>
+            <span>Forgot password?</span>
+            <Button children={`Log in`} onSubmit={handleSubmit} />
+          </form>
+        </div>
       </div>
     </div>
   )

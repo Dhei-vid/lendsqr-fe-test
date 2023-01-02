@@ -1,4 +1,4 @@
-.login-container {
+.login-body-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 3rem;
@@ -63,12 +63,17 @@ form {
   }
 }
 
-.login-container > .left-half {
-  background-image: url('../../assets/pablo-sign-in.png');
+.login-body-container > .left-half {
+  background-image: url('../../assets/pablo-sign-in.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: 80%;
 }
+
+// .passwordField {
+//   .password-cta {
+//   }
+// }
 
 // .passwordField > .password-cta {
 // }
