@@ -1,9 +1,13 @@
 .login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem;
+}
+
+.right-half {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
-  justify-content: center;
   margin: 2rem;
 
   h2 {
@@ -46,6 +50,7 @@ form {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #39cdcc;
+    cursor: pointer;
   }
 
   ::placeholder {
@@ -57,3 +62,13 @@ form {
     opacity: 0.6;
   }
 }
+
+.login-container > .left-half {
+  background-image: url('../../assets/pablo-sign-in.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+// .passwordField > .password-cta {
+// }
