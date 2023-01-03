@@ -1,11 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import './sidebar.scss'
+
+import { FaBriefcase, FaHome } from 'react-icons/fa'
+import './sidebar.style.scss'
 
 const sidebarNavItems = [
   {
+    display: 'Switch Organization',
+    icon: <FaBriefcase />,
+    to: '/',
+    section: ''
+  },
+  {
     display: 'Dashboard',
-    icon: <i className='bx bx-home'></i>,
+    icon: <FaHome />,
+    to: '/',
+    section: ''
+  },
+  {
+    display: 'Customers',
+    type: 'sub-heading',
     to: '/',
     section: ''
   },
