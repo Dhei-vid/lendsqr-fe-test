@@ -2,6 +2,9 @@ import { useState } from 'react'
 import Button from '../Button/button.component'
 import './login.form.style.scss'
 
+import logo from '../../assets/lendsqr_logo1.png'
+import logoImage from '../../assets/pablo-sign-in.png'
+
 const Login = () => {
   //   const [formFields, setFormFields] = useState(defaultFormFields)
   const [password, setPassword] = useState('')
@@ -23,15 +26,11 @@ const Login = () => {
 
   return (
     <div className='login-container'>
-      <div className='logo'>
-        <img
-          src='/lendsqr-fe-test/src/assets/lendsqr_logo_nbg.png'
-          alt='logo'
-        />
-      </div>
-
       <div className='login-body-container'>
-        <div className='left-half'></div>
+        <div className='left-half'>
+          <img className='logo' src={logo} alt='logo' />
+          <img className='img-logo' src={logoImage} alt='logo image' />
+        </div>
 
         <div className='right-half'>
           <h2> Welcome!</h2>

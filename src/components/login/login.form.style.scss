@@ -1,30 +1,51 @@
+.login-container {
+  margin: 0;
+  padding: 0;
+}
+
 .login-body-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 3rem;
-}
+  margin: 4rem;
 
-.right-half {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 2rem;
+  .left-half {
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
 
-  h2 {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 40px;
-    line-height: 55px;
-    letter-spacing: -0.04rem;
-    color: #213f7d;
+    .logo {
+      width: 12vw;
+      height: auto;
+    }
+
+    .img-logo {
+      width: 40vw;
+      height: auto;
+    }
   }
 
-  p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #545f7d;
-    margin-bottom: 50px;
+  .right-half {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 2rem;
+
+    h2 {
+      font-weight: 700;
+      font-style: normal;
+      font-size: 40px;
+      line-height: 55px;
+      letter-spacing: -0.04rem;
+      color: #213f7d;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      color: #545f7d;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -63,12 +84,12 @@ form {
   }
 }
 
-.login-body-container > .left-half {
-  background-image: url('../../assets/pablo-sign-in.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-}
+// .login-body-container > .left-half {
+//   background-image: url('../../assets/pablo-sign-in.svg');
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 80%;
+// }
 
 // .passwordField {
 //   .password-cta {
