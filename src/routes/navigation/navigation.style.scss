@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  margin: 2rem 3rem;
 
   .nav-items {
     color: #213f7d;
@@ -18,13 +18,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 35px;
+
+    .profile-item {
+      cursor: pointer;
+    }
 
     a > p {
       color: #213f7d;
     }
 
-    .notification-icon {
+    .icon {
       width: 25px;
       height: auto;
     }

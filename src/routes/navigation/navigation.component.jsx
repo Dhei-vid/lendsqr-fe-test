@@ -1,9 +1,16 @@
+// Components
 import SearchBar from '../../components/searchBar/searchbar.component'
+
+// styles
 import './navigation.style.scss'
 
+// Assets
 import logo from '../../assets/lendsqr_logo1.png'
 import profile from '../../assets/image 4.png'
+
+// Icons
 import { MdOutlineNotifications as Notification } from 'react-icons/md'
+import { MdOutlineArrowDropDown as Arrow } from 'react-icons/md'
 
 const Navigation = () => {
   return (
@@ -20,15 +27,16 @@ const Navigation = () => {
 
       <div className='nav-items'>
         <div className='profile'>
-          <a href='/'>
+          <a className='profile-item' href='/'>
             <p>Docs</p>
           </a>
 
-          <Notification className='notification-icon' />
+          <Notification className='icon profile-item' />
 
-          <div className='profile-details'>
+          <div className='profile-details profile-item'>
             <img src={profile} alt='user profile' />
             <span>Adedeji</span>
+            <Arrow className='icon' />
           </div>
         </div>
       </div>
