@@ -1,24 +1,36 @@
+import SearchBar from '../../components/searchBar/searchbar.component'
+import './navigation.style.scss'
+
 import logo from '../../assets/lendsqr_logo1.png'
 import profile from '../../assets/image 4.png'
-// import { BsBell } from 'react-icons/fa'
+import { MdOutlineNotifications as Notification } from 'react-icons/md'
 
 const Navigation = () => {
   return (
-    <div className='nav'>
+    <div className='nav-container'>
       <div className='nav-items'>
-        <img src={logo} alt='logo' />
+        <img className='logo' src={logo} alt='logo' />
       </div>
 
       <div className='nav-items'>
-        <div className='search-bar'></div>
+        <div className='search-bar'>
+          <SearchBar />
+        </div>
       </div>
 
       <div className='nav-items'>
-        <a href='/'>
-          <p>Docs</p>
-        </a>
-        {/* <BsBell /> */}
-        <img src={profile} alt='profile image' />
+        <div className='profile'>
+          <a href='/'>
+            <p>Docs</p>
+          </a>
+
+          <Notification className='notification-icon' />
+
+          <div className='profile-details'>
+            <img src={profile} alt='user profile' />
+            <span>Adedeji</span>
+          </div>
+        </div>
       </div>
     </div>
   )

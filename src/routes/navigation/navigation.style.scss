@@ -1,0 +1,45 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+
+  .nav-items {
+    color: #213f7d;
+  }
+
+  .nav-items > .logo {
+    width: 10vw;
+    height: auto;
+  }
+
+  .nav-items > .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+
+    a > p {
+      color: #213f7d;
+    }
+
+    .notification-icon {
+      width: 25px;
+      height: auto;
+    }
+
+    img {
+      border-radius: 100%;
+      width: 30px;
+    }
+
+    .profile-details {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

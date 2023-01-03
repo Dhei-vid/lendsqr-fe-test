@@ -8,19 +8,12 @@ import UserDetails from './components/userDetailsPage/userDetailsPage.component'
 function App () {
   return (
     <Routes>
-      <Route path='/' element={<Login />}>
-        <Route index element={<Login />} />
-        <Route path='dashboard' element={<Dashboard />} />
-        <Route path='user' element={<UserDetails />} />
-      </Route>
+      <Route path='login' element={<Login />} />
+      <Route path='nav' element={<Navigation />} />
+      <Route path='dashboard' element={<Dashboard />} />
+      <Route path='user' element={<UserDetails />} />
     </Routes>
   )
 }
 
 export default App
-
-{
-  /* <div className='App'>
-<Login />
-</div> */
-}
