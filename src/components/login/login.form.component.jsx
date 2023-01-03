@@ -29,7 +29,7 @@ const Login = () => {
       <div className='login-body-container'>
         <div className='left-half'>
           <img className='logo' src={logo} alt='logo' />
-          <img className='img-logo' src={logoImage} alt='logo image' />
+          <img className='img-logo' src={logoImage} alt='logo animation' />
         </div>
 
         <div className='right-half'>
