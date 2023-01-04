@@ -5,11 +5,22 @@ import { customers, business, settings, menu } from './sideBar.elements'
 import './sidebar.style.scss'
 
 const SideBar = () => {
+  const [activeStatus, setActiveStatus] = useState(false)
+
+  useEffect(() => {})
+
+  const onActiveHandler = () => {
+    setActiveStatus(true)
+  }
+
   return (
     <div className='side-bar-container'>
-      <div className='customers'>
+      <div className='side-bar-elements'>
         <ul>
-          <li className='side-bar-items-container' key={menu.organization}>
+          <li
+            className='side-bar-items-container active'
+            key={menu.organization}
+          >
             <div className='side-bar-items organizations-item'>
               <span className='side-bar-icons'>{menu.oLIcon}</span>
               <span className='side-bar-title'>{menu.organization}</span>

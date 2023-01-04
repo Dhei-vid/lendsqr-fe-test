@@ -1,6 +1,5 @@
 .side-bar-container {
-  margin: 3rem;
-  font-family: 'Work-sans';
+  font-family: 'Work Sans', sans-serif;
 
   .organizations-item {
     margin-bottom: 3.3rem;
@@ -17,17 +16,31 @@
   .side-bar-items {
     display: flex;
     gap: 12px;
+    margin: 0.4rem 2rem;
+    color: #213f7d;
     cursor: pointer;
+
+    .side-bar-title {
+      color: #545f7d !important;
+    }
   }
 
   .side-bar-items-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    height: 60px;
+
+    &:hover {
+      background: rgba(57, 205, 204, 0.2);
+      border-left: solid 5px #39cdcc;
+    }
   }
 
   .side-bar-subheading {
-    margin: 2.5rem 0 -1.5rem 0;
+    margin: 0 0 0 2rem;
     text-transform: uppercase;
+    color: #545f7d;
   }
 }
