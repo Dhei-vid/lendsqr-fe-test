@@ -1,105 +1,59 @@
-import { useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
-import { FaBriefcase, FaHome } from 'react-icons/fa'
+// import SIDE_BAR_NAV_LIST from './sideBar.elements'
+import { customers, business, settings, menu } from './sideBar.elements'
 import './sidebar.style.scss'
 
-const sidebarNavItems = [
-  {
-    display: 'Switch Organization',
-    icon: <FaBriefcase />,
-    to: '/',
-    section: ''
-  },
-  {
-    display: 'Dashboard',
-    icon: <FaHome />,
-    to: '/',
-    section: ''
-  },
-  {
-    display: 'Customers',
-    type: 'sub-heading',
-    to: '/',
-    section: ''
-  },
-  {
-    display: 'Getting Started',
-    icon: <i className='bx bx-star'></i>,
-    to: '/started',
-    section: 'started'
-  },
-  {
-    display: 'Calendar',
-    icon: <i className='bx bx-calendar'></i>,
-    to: '/calendar',
-    section: 'calendar'
-  },
-  {
-    display: 'User',
-    icon: <i className='bx bx-user'></i>,
-    to: '/user',
-    section: 'user'
-  },
-  {
-    display: 'Orders',
-    icon: <i className='bx bx-receipt'></i>,
-    to: '/order',
-    section: 'order'
-  }
-]
-
 const SideBar = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [stepHeight, setStepHeight] = useState(0)
-  const sidebarRef = useRef()
-  const indicatorRef = useRef()
-  const location = useLocation()
-
-  useEffect(() => {
-    setTimeout(() => {
-      const sidebarItem = sidebarRef.current.querySelector(
-        '.sidebar__menu__item'
-      )
-      indicatorRef.current.style.height = `${sidebarItem.clientHeight}px`
-      setStepHeight(sidebarItem.clientHeight)
-    }, 50)
-  }, [])
-
-  // change active index
-  useEffect(() => {
-    const curPath = window.location.pathname.split('/')[1]
-    const activeItem = sidebarNavItems.findIndex(
-      item => item.section === curPath
-    )
-    setActiveIndex(curPath.length === 0 ? 0 : activeItem)
-  }, [location])
-
   return (
-    <div className='sidebar'>
-      <div className='sidebar__logo'>Animate</div>
-      <div ref={sidebarRef} className='sidebar__menu'>
-        <div
-          ref={indicatorRef}
-          className='sidebar__menu__indicator'
-          style={{
-            transform: `translateX(-50%) translateY(${
-              activeIndex * stepHeight
-            }px)`
-          }}
-        ></div>
-        {sidebarNavItems.map((item, index) => (
-          <Link to={item.to} key={index}>
-            <div
-              className={`sidebar__menu__item ${
-                activeIndex === index ? 'active' : ''
-              }`}
-            >
-              <div className='sidebar__menu__item__icon'>{item.icon}</div>
-              <div className='sidebar__menu__item__text'>{item.display}</div>
+    <div className='side-bar-container'>
+      <div className='customers'>
+        <ul>
+          <li className='side-bar-items-container' key={menu.organization}>
+            <div className='side-bar-items organizations-item'>
+              <span className='side-bar-icons'>{menu.oLIcon}</span>
+              <span className='side-bar-title'>{menu.organization}</span>
+              <span className='side-bar-icons'>{menu.oRIcon}</span>
             </div>
-          </Link>
-        ))}
+          </li>
+
+          <li className='side-bar-items-container' key={menu.dashboard}>
+            <div className='side-bar-items dashboard-item'>
+              <span className='side-bar-icons'>{menu.dIcon}</span>
+              <span className='side-bar-title'>{menu.dashboard}</span>
+            </div>
+          </li>
+
+          {customers.map((customers, index) => (
+            <li className='side-bar-items-container' key={index}>
+              <p className='side-bar-subheading'>{customers.heading}</p>
+              <div className='side-bar-items'>
+                <span className='side-bar-icons'>{customers.icon}</span>
+                <span className='side-bar-title'>{customers.title}</span>
+              </div>
+            </li>
+          ))}
+
+          {business.map((business, index) => (
+            <li className='side-bar-items-container' key={index + 1}>
+              <p className='side-bar-subheading'>{business.heading}</p>
+              <div className='side-bar-items'>
+                <span className='side-bar-icons'>{business.icon}</span>
+                <span className='side-bar-title'>{business.title}</span>
+              </div>
+            </li>
+          ))}
+
+          {settings.map((settings, index) => (
+            <li className='side-bar-items-container' key={index + 2}>
+              <p className='side-bar-subheading'>{settings.heading}</p>
+              <div className='side-bar-items'>
+                <span className='side-bar-icons'>{settings.icon}</span>
+                <span className='side-bar-title'>{settings.title}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
