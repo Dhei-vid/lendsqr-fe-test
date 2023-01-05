@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import dateFormat from 'dateformat'
 
-import filter from '../../assets/filter-results-button.png'
 import { BiFilter } from 'react-icons/bi'
 
 import './userData.styles.scss'
