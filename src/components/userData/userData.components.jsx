@@ -7,6 +7,11 @@ import './userData.styles.scss'
 
 const UserData = () => {
   const [data, setData] = useState(null)
+  const [filter, setFilter] = useState(false)
+
+  const onClickHandler = () => {
+    setFilter(true)
+  }
 
   useEffect(() => {
     async function fetchData () {
@@ -14,9 +19,16 @@ const UserData = () => {
         'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users'
       )
       const data = await response.json()
-      console.log(data)
 
-      setData(data)
+      // storing data in local storage
+      localStorage.setItem('data', JSON.stringify(data))
+
+      // retrieving data from local storage
+      const userData = JSON.parse(localStorage.getItem('data'))
+
+      console.log(userData)
+
+      setData(userData)
     }
 
     fetchData()
@@ -31,9 +43,14 @@ const UserData = () => {
               Organization
               <span className='data-heading-icon'>
                 <BiFilter
+                  onClick={onClickHandler}
                   className='data-icon'
                   size='20px'
-                  style={{ position: 'absolute', top: '-3px' }}
+                  style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    cursor: 'pointer'
+                  }}
                 />
               </span>
             </th>
@@ -41,9 +58,14 @@ const UserData = () => {
               Username
               <span className='data-heading-icon'>
                 <BiFilter
+                  onClick={onClickHandler}
                   className='data-icon'
                   size='20px'
-                  style={{ position: 'absolute', top: '-3px' }}
+                  style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    cursor: 'pointer'
+                  }}
                 />
               </span>
             </th>
@@ -51,9 +73,14 @@ const UserData = () => {
               Email
               <span className='data-heading-icon'>
                 <BiFilter
+                  onClick={onClickHandler}
                   className='data-icon'
                   size='20px'
-                  style={{ position: 'absolute', top: '-3px' }}
+                  style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    cursor: 'pointer'
+                  }}
                 />
               </span>
             </th>
@@ -61,9 +88,14 @@ const UserData = () => {
               Phone Number
               <span className='data-heading-icon'>
                 <BiFilter
+                  onClick={onClickHandler}
                   className='data-icon'
                   size='20px'
-                  style={{ position: 'absolute', top: '-3px' }}
+                  style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    cursor: 'pointer'
+                  }}
                 />
               </span>
             </th>
@@ -71,9 +103,14 @@ const UserData = () => {
               Date Joined
               <span className='data-heading-icon'>
                 <BiFilter
+                  onClick={onClickHandler}
                   className='data-icon'
                   size='20px'
-                  style={{ position: 'absolute', top: '-3px' }}
+                  style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    cursor: 'pointer'
+                  }}
                 />
               </span>
             </th>
@@ -81,9 +118,14 @@ const UserData = () => {
               Status
               <span className='data-heading-icon'>
                 <BiFilter
+                  onClick={onClickHandler}
                   className='data-icon'
                   size='20px'
-                  style={{ position: 'absolute', top: '-3px' }}
+                  style={{
+                    position: 'absolute',
+                    top: '-3px',
+                    cursor: 'pointer'
+                  }}
                 />
               </span>
             </th>
@@ -101,7 +143,9 @@ const UserData = () => {
                 <td className='user-data-item'>
                   {dateFormat(`${item.createdAt}`, 'mmm dd, yyyy hh:M TT')}
                 </td>
-                <td className='user-data-item'>Status</td>
+                <td className='user-data-item'>
+                  <div className='status'>Status</div>
+                </td>
               </tr>
             ))
           ) : (
