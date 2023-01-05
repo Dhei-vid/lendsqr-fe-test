@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './fonts/Metropolis-Medium.otf'
+
 import './index.css'
 
 import { BrowserRouter } from 'react-router-dom'
