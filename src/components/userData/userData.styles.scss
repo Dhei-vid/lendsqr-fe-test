@@ -28,7 +28,28 @@ table {
 
   .status {
     background: rgba(84, 95, 125, 0.06);
-    padding: 1rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 100px;
+  }
+
+  .pending {
+    color: #e9b200;
+    background: rgba(233, 178, 0, 0.1);
+  }
+
+  .blacklisted {
+    color: #e4033b;
+    background: rgba(228, 3, 59, 0.1);
+  }
+
+  .active {
+    color: #39cd62;
+    background: rgba(57, 205, 98, 0.1);
+  }
+
+  .user-data-status-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }

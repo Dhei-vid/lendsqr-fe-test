@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import dateFormat from 'dateformat'
 
 import { BiFilter } from 'react-icons/bi'
+import { RxDotsVertical } from 'react-icons/rx'
 
 import './userData.styles.scss'
 
@@ -27,7 +28,6 @@ const UserData = () => {
       const userData = JSON.parse(localStorage.getItem('data'))
 
       console.log(userData)
-
       setData(userData)
     }
 
@@ -143,8 +143,16 @@ const UserData = () => {
                 <td className='user-data-item'>
                   {dateFormat(`${item.createdAt}`, 'mmm dd, yyyy hh:M TT')}
                 </td>
-                <td className='user-data-item'>
-                  <div className='status'>Status</div>
+                <td className='user-data-item user-data-status-item'>
+                  <div className='status pending'>Pending</div>
+                  <div className='status-icon'>
+                    <RxDotsVertical
+                      size='20px'
+                      style={{
+                        cursor: 'pointer'
+                      }}
+                    />
+                  </div>
                 </td>
               </tr>
             ))
