@@ -1,5 +1,5 @@
 // Components
-import SearchBar from '../../components/searchBar/searchbar.component'
+import SearchBar from '../searchBar/searchbar.component'
 
 // styles
 import './navigation.style.scss'

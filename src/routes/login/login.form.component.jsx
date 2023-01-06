@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Button from '../Button/button.component'
+import Button from '../../components/Button/button.component'
 import './login.form.style.scss'
 
 import logo from '../../assets/lendsqr_logo1.png'

@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Navigation from './routes/navigation/navigation.component'
-import Login from './components/login/login.form.component'
-import Dashboard from './components/dashboard/dashboard.component'
-import UserDetails from './components/userDetailsPage/userDetailsPage.component'
+import Navigation from './components/navigation/navigation.component'
+import Login from './routes/login/login.form.component'
+import Dashboard from './routes/dashboard/dashboard.component'
+import UserDetails from './routes/userDetailsPage/userDetailsPage.component'
 import SideBar from './components/sideBar/sidebar.component'
 import Users from './components/users/users.component'
 import Filter from './components/filter/filter.component'
