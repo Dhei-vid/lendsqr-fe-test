@@ -26,7 +26,7 @@ const Filter = () => {
           <input name='email' type='text' placeholder='Email' />
         </label>
 
-        <label htmlFor='date'>
+        <label>
           Date
           <input name='date' placeholder='Date' type='date' />
         </label>
