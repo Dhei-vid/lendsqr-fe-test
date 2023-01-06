@@ -35,135 +35,140 @@ const UserData = () => {
   }, [])
 
   return (
-    <div className='user-data-container'>
-      <table>
-        <thead>
-          <tr className='data-heading-container'>
-            <th className='data-headings'>
-              Organization
-              <span className='data-heading-icon'>
-                <BiFilter
-                  onClick={onClickHandler}
-                  className='data-icon'
-                  size='20px'
-                  style={{
-                    position: 'absolute',
-                    // top: '-3px',
-                    cursor: 'pointer'
-                  }}
-                />
-              </span>
-            </th>
-            <th className='data-headings'>
-              Username
-              <span className='data-heading-icon'>
-                <BiFilter
-                  onClick={onClickHandler}
-                  className='data-icon'
-                  size='20px'
-                  style={{
-                    position: 'absolute',
-                    // top: '-3px',
-                    cursor: 'pointer'
-                  }}
-                />
-              </span>
-            </th>
-            <th className='data-headings'>
-              Email
-              <span className='data-heading-icon'>
-                <BiFilter
-                  onClick={onClickHandler}
-                  className='data-icon'
-                  size='20px'
-                  style={{
-                    position: 'absolute',
-                    // top: '-3px',
-                    cursor: 'pointer'
-                  }}
-                />
-              </span>
-            </th>
-            <th className='data-headings'>
-              Phone Number
-              <span className='data-heading-icon'>
-                <BiFilter
-                  onClick={onClickHandler}
-                  className='data-icon'
-                  size='20px'
-                  style={{
-                    position: 'absolute',
-                    // top: '0px',
-                    cursor: 'pointer'
-                  }}
-                />
-              </span>
-            </th>
-            <th className='data-headings'>
-              Date Joined
-              <span className='data-heading-icon'>
-                <BiFilter
-                  onClick={onClickHandler}
-                  className='data-icon'
-                  size='20px'
-                  style={{
-                    position: 'absolute',
-                    // top: '-3px',
-                    cursor: 'pointer'
-                  }}
-                />
-              </span>
-            </th>
-            <th className='data-headings'>
-              Status
-              <span className='data-heading-icon'>
-                <BiFilter
-                  onClick={onClickHandler}
-                  className='data-icon'
-                  size='20px'
-                  style={{
-                    position: 'absolute',
-                    // top: '-3px',
-                    cursor: 'pointer'
-                  }}
-                />
-              </span>
-            </th>
-          </tr>
-        </thead>
-
-        <tbody key={1}>
-          {data ? (
-            data.map(item => (
-              <tr className='user-data-item-container'>
-                <td className='user-data-item'>{item.orgName}</td>
-                <td className='user-data-item'>{item.userName}</td>
-                <td className='user-data-item'>{item.email}</td>
-                <td className='user-data-item'>{item.phoneNumber}</td>
-                <td className='user-data-item'>
-                  {dateFormat(`${item.createdAt}`, 'mmm dd, yyyy hh:M TT')}
-                </td>
-                <td className='user-data-item user-data-status-item'>
-                  <div className='status pending'>Pending</div>
-                  <div className='status-icon'>
-                    <RxDotsVertical
-                      size='20px'
-                      style={{
-                        cursor: 'pointer'
-                      }}
-                    />
-                  </div>
-                </td>
-              </tr>
-            ))
-          ) : (
-            <tr className='user-data-error-container'>
-              <td className='user-data-error'>No data</td>
+    <>
+      <div className='user-data-container'>
+        <table>
+          <thead>
+            <tr className='data-heading-container'>
+              <th className='data-headings'>
+                Organization
+                <span className='data-heading-icon'>
+                  <BiFilter
+                    onClick={onClickHandler}
+                    className='data-icon'
+                    size='20px'
+                    style={{
+                      position: 'absolute',
+                      // top: '-3px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                </span>
+              </th>
+              <th className='data-headings'>
+                Username
+                <span className='data-heading-icon'>
+                  <BiFilter
+                    onClick={onClickHandler}
+                    className='data-icon'
+                    size='20px'
+                    style={{
+                      position: 'absolute',
+                      // top: '-3px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                </span>
+              </th>
+              <th className='data-headings'>
+                Email
+                <span className='data-heading-icon'>
+                  <BiFilter
+                    onClick={onClickHandler}
+                    className='data-icon'
+                    size='20px'
+                    style={{
+                      position: 'absolute',
+                      // top: '-3px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                </span>
+              </th>
+              <th className='data-headings'>
+                Phone Number
+                <span className='data-heading-icon'>
+                  <BiFilter
+                    onClick={onClickHandler}
+                    className='data-icon'
+                    size='20px'
+                    style={{
+                      position: 'absolute',
+                      // top: '0px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                </span>
+              </th>
+              <th className='data-headings'>
+                Date Joined
+                <span className='data-heading-icon'>
+                  <BiFilter
+                    onClick={onClickHandler}
+                    className='data-icon'
+                    size='20px'
+                    style={{
+                      position: 'absolute',
+                      // top: '-3px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                </span>
+              </th>
+              <th className='data-headings'>
+                Status
+                <span className='data-heading-icon'>
+                  <BiFilter
+                    onClick={onClickHandler}
+                    className='data-icon'
+                    size='20px'
+                    style={{
+                      position: 'absolute',
+                      // top: '-3px',
+                      cursor: 'pointer'
+                    }}
+                  />
+                </span>
+              </th>
             </tr>
-          )}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody key={1}>
+            {data ? (
+              data.slice(0, 10).map(item => (
+                <tr className='user-data-item-container'>
+                  <td className='user-data-item'>{item.orgName}</td>
+                  <td className='user-data-item'>{item.userName}</td>
+                  <td className='user-data-item'>{item.email}</td>
+                  <td className='user-data-item'>{item.phoneNumber}</td>
+                  <td className='user-data-item'>
+                    {dateFormat(`${item.createdAt}`, 'mmm dd, yyyy hh:M TT')}
+                  </td>
+                  <td className='user-data-item user-data-status-item'>
+                    <div className='status pending'>Pending</div>
+                    <div className='status-icon'>
+                      <RxDotsVertical
+                        size='20px'
+                        style={{
+                          cursor: 'pointer'
+                        }}
+                      />
+                    </div>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr className='user-data-error-container'>
+                <td className='user-data-error'>No data</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <span>Showing</span>
+        <span>Showing</span>
+      </div>
+    </>
   )
 }
 

@@ -24,9 +24,8 @@ table {
   }
 
   .user-data-item {
-    padding: 1.2rem 0.2rem;
+    padding: 1rem 0.2rem;
     text-align: start;
-    border-bottom: solid 1px rgba(33, 63, 125, 0.1);
     overflow-wrap: break-word;
   }
 
@@ -57,7 +56,7 @@ table {
     align-items: center;
   }
 
-  .user-data-item-container > td {
-    width: 2px;
+  .user-data-item-container {
+    border-bottom: solid 1px rgba(33, 63, 125, 0.1);
   }
 }
