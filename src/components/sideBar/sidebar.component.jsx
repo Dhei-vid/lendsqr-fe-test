@@ -27,7 +27,6 @@ const SideBar = () => {
               <span className='side-bar-icons'>{menu.oRIcon}</span>
             </div>
           </li>
-
           <li className='side-bar-items-container' key={menu.dashboard}>
             <div className='side-bar-items dashboard-item'>
               <span className='side-bar-icons'>{menu.dIcon}</span>
@@ -35,9 +34,9 @@ const SideBar = () => {
             </div>
           </li>
 
+          <p className='side-bar-subheading'>customers</p>
           {customers.map((customers, index) => (
             <li className='side-bar-items-container' key={index}>
-              <p className='side-bar-subheading'>{customers.heading}</p>
               <div className='side-bar-items'>
                 <span className='side-bar-icons'>{customers.icon}</span>
                 <span className='side-bar-title'>{customers.title}</span>
@@ -45,19 +44,18 @@ const SideBar = () => {
             </li>
           ))}
 
+          <p className='side-bar-subheading'>business</p>
           {business.map((business, index) => (
             <li className='side-bar-items-container' key={index + 1}>
-              <p className='side-bar-subheading'>{business.heading}</p>
               <div className='side-bar-items'>
                 <span className='side-bar-icons'>{business.icon}</span>
                 <span className='side-bar-title'>{business.title}</span>
               </div>
             </li>
           ))}
-
+          <p className='side-bar-subheading'>settings</p>
           {settings.map((settings, index) => (
             <li className='side-bar-items-container' key={index + 2}>
-              <p className='side-bar-subheading'>{settings.heading}</p>
               <div className='side-bar-items'>
                 <span className='side-bar-icons'>{settings.icon}</span>
                 <span className='side-bar-title'>{settings.title}</span>

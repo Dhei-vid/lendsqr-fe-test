@@ -1,0 +1,9 @@
+.dashboard-container {
+  background: #e5e5e5;
+
+  .dashboard-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 1rem 0 0;
+  }
+}

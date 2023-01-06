@@ -29,9 +29,6 @@ export const menu = {
 
 export const customers = [
   {
-    heading: 'Customers'
-  },
-  {
     title: 'Users',
     icon: <HiUsers />
   },
@@ -66,9 +63,6 @@ export const customers = [
 ]
 
 export const business = [
-  {
-    heading: 'Business'
-  },
   {
     title: 'Organization',
     icon: <FaBriefcase />
@@ -108,9 +102,6 @@ export const business = [
 ]
 
 export const settings = [
-  {
-    heading: 'Settings'
-  },
   {
     title: 'Preferences',
     icon: <GoSettings />

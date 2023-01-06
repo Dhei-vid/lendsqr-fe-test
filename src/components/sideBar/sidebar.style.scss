@@ -1,8 +1,12 @@
 .side-bar-container {
   font-family: 'Work Sans', sans-serif;
+  width: 250px;
+  height: auto;
+  font-size: 12px;
+  background: #fff;
 
   .organizations-item {
-    margin-bottom: 3.3rem;
+    margin-bottom: 3rem;
   }
 
   .dashboard-item {
@@ -15,10 +19,9 @@
 
   .side-bar-items {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     margin: 0.4rem 2rem;
     color: #213f7d;
-    cursor: pointer;
 
     .side-bar-title {
       color: #545f7d !important;
@@ -30,6 +33,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    cursor: pointer;
     height: 60px;
 
     &:hover {
@@ -39,7 +43,7 @@
   }
 
   .side-bar-subheading {
-    margin: 0 0 0 2rem;
+    margin: 1rem 0 0 2rem;
     text-transform: uppercase;
     color: #545f7d;
   }
