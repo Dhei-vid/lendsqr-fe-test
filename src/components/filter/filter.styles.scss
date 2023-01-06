@@ -1,33 +1,46 @@
-form {
+.filter-form {
   background: white;
-  border: 1px solid #dedede;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 0 auto;
-  max-width: 500px;
-  padding: 30px 50px;
-
-  option {
-    letter-spacing: 12px;
-  }
+  max-width: 270px;
+  height: 600px;
+  padding: 10px 30px;
 
   input,
   select {
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
+    border: 1px solid rgba(33, 63, 125, 0.2);
+    border-radius: 8px;
     box-sizing: border-box;
     padding: 10px;
     width: 100%;
-    text-indent: 0;
+    text-indent: 0.4rem;
+    letter-spacing: 0.1rem;
   }
 
   label {
-    color: #3d3d3d;
+    color: #545f7d;
     display: block;
-    font-family: sans-serif;
     font-size: 14px;
     font-weight: 500;
+    line-height: 16px;
     margin-bottom: 5px;
+
+    select {
+      color: #545f7d;
+      opacity: 0.7;
+    }
+  }
+
+  ::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545f7d;
+    opacity: 0.7 !important;
   }
 }

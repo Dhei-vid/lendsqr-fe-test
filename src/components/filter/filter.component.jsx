@@ -3,12 +3,14 @@ import './filter.styles.scss'
 const Filter = () => {
   return (
     <div className='filter-container'>
-      <form>
+      <form className='filter-form'>
         <label>
           Organization
-          <select name='organization' id='organization'>
+          <select name='organization' id='organization' className='Organ'>
+            <option value='default' hidden>
+              Select
+            </option>
             <option value='org1'>org1</option>
-            <option value='org2'>org2</option>
             <option value='org3'>org3</option>
             <option value='org4'>org4</option>
           </select>
@@ -16,27 +18,34 @@ const Filter = () => {
 
         <label>
           Username
-          <input name='username' type='text' />
+          <input name='username' type='text' placeholder='User' />
         </label>
 
         <label>
           Email
-          <input name='email' type='text' />
+          <input name='email' type='text' placeholder='Email' />
         </label>
 
-        <label>
+        <label htmlFor='date'>
           Date
-          <input name='date' type='date' />
+          <input name='date' placeholder='Date' type='date' />
         </label>
 
         <label>
           Phone Number
-          <input name='phone' type='text' />
+          <input name='phone' type='text' placeholder='Phone Number' />
         </label>
 
         <label>
           Status
-          <input name='status' type='select' />
+          <select name='status' id='status'>
+            <option value='default' hidden>
+              Select
+            </option>
+            <option value='pending'>Pending</option>
+            <option value='blacklisted'>Blacklisted</option>
+            <option value='active'>Active</option>
+          </select>
         </label>
       </form>
     </div>
