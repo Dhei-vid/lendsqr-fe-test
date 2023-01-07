@@ -21,7 +21,44 @@ const UserPageDetails = () => {
         </span>
       </div>
 
-      <div></div>
+      <div className='bank-details-container'>
+        <div className='basic-info-container'>
+          <div className='basic-profile border-right'>
+            <div>
+              <img src={userData[0].profile.avatar} alt='' />
+            </div>
+            <div>
+              <h2 className='basic-profile-head'>
+                {userData[0].profile.firstName +
+                  ' ' +
+                  userData[0].profile.lastName}
+              </h2>
+              <p className='basic-profile-subhead'>LSQFf587g90</p>
+            </div>
+          </div>
+
+          <div className='border-right'>
+            <h4 className='user-tier'>User's Tier</h4>
+            <i className='fa fa-star' />
+          </div>
+
+          <div>
+            <h2 className='basic-profile-head'>
+              &#8358;{userData[0].accountBalance}
+            </h2>
+            <p className='basic-profile-subhead'>{`${userData[0].accountNumber}/Providus Bank`}</p>
+          </div>
+        </div>
+
+        <div className='bank-details-headings'>
+          <p className='bank-heading-items'>General Details</p>
+          <p className='bank-heading-items'>Documents</p>
+          <p className='bank-heading-items'>Bank Details</p>
+          <p className='bank-heading-items'>Loans</p>
+          <p className='bank-heading-items'>Savings</p>
+          <p className='bank-heading-items'>App and System</p>
+        </div>
+      </div>
 
       <div className='info-container'>
         <div>
