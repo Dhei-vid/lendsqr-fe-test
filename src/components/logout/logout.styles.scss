@@ -1,0 +1,37 @@
+.logout-container {
+  font-family: 'Work Sans', sans-serif;
+  width: 250px;
+  height: auto;
+  font-size: 12px;
+  background: #fff;
+
+  li {
+    list-style: none;
+  }
+
+  .logout-list {
+    color: #213f7d;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+
+    border-top: 1px solid rgba(33, 63, 125, 0.1);
+  }
+
+  .logout-icon-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logout-list-item {
+    margin: 0 2rem 0.9rem;
+    padding-top: 1rem;
+    cursor: pointer;
+
+    .version {
+      padding-bottom: 1rem;
+    }
+  }
+}
