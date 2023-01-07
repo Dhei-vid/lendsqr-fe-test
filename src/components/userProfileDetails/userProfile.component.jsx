@@ -1,4 +1,6 @@
 import { HiArrowLongLeft } from 'react-icons/hi2'
+import { IoStarSharp, IoStarOutline } from 'react-icons/io5'
+
 import './userProfile.styles.scss'
 
 const UserProfile = () => {
@@ -7,7 +9,7 @@ const UserProfile = () => {
   console.log(userData)
 
   return (
-    <div className='user-details-container'>
+    <div className='user-profile-container'>
       <div className='user-details-nav'>
         <HiArrowLongLeft />
         <span className='b2u-cta'>Back to Users</span>
@@ -39,7 +41,11 @@ const UserProfile = () => {
 
           <div className='border-right'>
             <h4 className='user-tier'>User's Tier</h4>
-            <i className='fa fa-star' />
+            <div>
+              <IoStarSharp style={{ color: '#E9B200' }} />
+              <IoStarOutline style={{ color: '#E9B200' }} />
+              <IoStarOutline style={{ color: '#E9B200' }} />
+            </div>
           </div>
 
           <div>
@@ -61,7 +67,7 @@ const UserProfile = () => {
       </div>
 
       <div className='info-container'>
-        <div>
+        <div className='border-item'>
           <p className='user-details-subheading'>Personal Information</p>
           <div className='info personal-info-container'>
             <div>
@@ -103,7 +109,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div>
+        <div className='border-item'>
           <p className='user-details-subheading'>Education and Employment</p>
           <div className='info edu-info-container'>
             <div>
@@ -143,7 +149,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div>
+        <div className='border-item'>
           <p className='user-details-subheading'>Socials</p>
           <div className='info social-info-container'>
             <div>
@@ -161,7 +167,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div>
+        <div className='border-item'>
           <p className='user-details-subheading'>Guarantor</p>
           <div className='info guarantor-info-container'>
             <div className='info-details-container'>
@@ -183,7 +189,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div>
+        <div className='border-item'>
           <div className='info further-info-container'>
             <div>
               <h3 className='info-header'>full Name</h3>

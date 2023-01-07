@@ -1,11 +1,11 @@
-.user-details-container {
+.user-profile-container {
   font-family: 'Work Sans' !important;
   margin: 2rem 2rem 0 2rem;
 
   .user-details-subheading {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 18.77px;
+    line-height: 18.77pxbor;
     color: #213f7d;
     margin: 1.4rem 1.4rem;
   }
@@ -31,11 +31,6 @@
   justify-content: flex-start;
 }
 
-// .border-right {
-//   border-right: 3px solid rgba(33, 63, 125, 0.06);
-//   height: 50%;
-// }
-
 img {
   border-radius: 100%;
 }
@@ -51,21 +46,26 @@ img {
 
 .basic-profile-head {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 26px;
   color: #213f7d;
 }
 
+.basic-profile-head,
+.user-tier {
+  padding-bottom: 1rem;
+}
+
 .basic-profile-subhead {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
   color: #545f7d;
 }
 
 .user-tier {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
   color: #545f7d;
 }
@@ -80,6 +80,20 @@ img {
 
 .bank-heading-items {
   cursor: pointer;
+  text-align: center;
+  line-height: 8px;
+  padding-bottom: 1.2rem;
+
+  &:hover {
+    box-sizing: border-box;
+    color: #39cdcc;
+
+    padding-bottom: 1rem;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    width: fit-content;
+    transition: all 0.2s;
+  }
 }
 
 .personal-info-container,
@@ -98,14 +112,13 @@ img {
   padding: 1.5rem;
 }
 
-.info {
-  display: grid;
-  border-bottom: solid 1px rgba(33, 63, 125, 0.1);
-  gap: 1.3rem;
+div + .border-item {
+  border-top: solid 1px rgba(33, 63, 125, 0.1);
 }
 
-.info > div:last-child {
-  border-bottom: none !important;
+.info {
+  display: grid;
+  gap: 1.3rem;
 }
 
 .personal-info-container,
@@ -133,7 +146,7 @@ img {
 }
 
 .info-text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 19px;
 }
@@ -156,7 +169,7 @@ img {
 .b2u-cta {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   color: #545f7d;
 }
@@ -164,11 +177,17 @@ img {
 .user-heading {
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
   color: #213f7d;
 }
 
 .further-info-container {
   padding-top: 3.5rem;
+}
+
+.border-right {
+  border-right: solid 1px rgba(33, 63, 125, 0.1);
+  height: 4rem;
+  padding-right: 4rem;
 }
