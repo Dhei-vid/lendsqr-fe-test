@@ -27,7 +27,7 @@ const UserData = () => {
       // retrieving data from local storage
       const userData = JSON.parse(localStorage.getItem('data'))
 
-      console.log(userData)
+      // console.log(userData)
       setData(userData)
     }
 
@@ -132,10 +132,10 @@ const UserData = () => {
               </th>
             </tr>
           </thead>
-          <tbody key={1}>
+          <tbody>
             {data ? (
               data.slice(0, 10).map(item => (
-                <tr className='user-data-item-container'>
+                <tr className='user-data-item-container' key={item.id}>
                   <td className='user-data-item'>{item.orgName}</td>
                   <td className='user-data-item'>{item.userName}</td>
                   <td className='user-data-item'>{item.email}</td>
