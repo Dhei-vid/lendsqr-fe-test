@@ -1,7 +1,7 @@
 import { HiArrowLongLeft } from 'react-icons/hi2'
-import './userDetailsPage.styles.scss'
+import './userProfile.styles.scss'
 
-const UserPageDetails = () => {
+const UserProfile = () => {
   const userData = JSON.parse(localStorage.getItem('data'))
 
   console.log(userData)
@@ -208,4 +208,4 @@ const UserPageDetails = () => {
   )
 }
 
-export default UserPageDetails
+export default UserProfile
