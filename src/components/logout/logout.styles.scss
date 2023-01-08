@@ -18,6 +18,30 @@
     border-top: 1px solid rgba(33, 63, 125, 0.1);
   }
 
+  .side-bar-items-container {
+    height: 60px;
+
+    cursor: pointer;
+    &:hover {
+      background: rgba(57, 205, 204, 0.2);
+      border-left: solid 5px #39cdcc;
+    }
+  }
+
+  .side-bar-item {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 10px;
+    padding: 0.4rem 2rem 4rem 2rem;
+    color: #213f7d;
+    transition: all 0.4s;
+
+    .side-bar-title {
+      color: #545f7d !important;
+    }
+  }
+
   .logout-icon-text {
     display: flex;
     justify-content: flex-start;
