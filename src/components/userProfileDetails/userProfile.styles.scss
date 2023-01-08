@@ -156,6 +156,37 @@ div + .border-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .btn {
+    border-radius: 8px;
+    width: 170px;
+    height: 40px;
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .blacklist-btn {
+    border: 1px solid #e4033b;
+    color: #e4033b;
+  }
+
+  .active-btn {
+    border: 1px solid #39cdcc;
+    color: #39cdcc;
+  }
 }
 
 .user-details-nav {

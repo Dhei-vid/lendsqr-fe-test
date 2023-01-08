@@ -17,9 +17,9 @@ const UserProfile = () => {
 
       <div className='user-details-header-items'>
         <span className='user-heading'>User Details</span>
-        <span>
-          <button>blacklist user</button>
-          <button>active user</button>
+        <span className='btn-container'>
+          <button className='btn blacklist-btn'>blacklist user</button>
+          <button className='btn active-btn'>active user</button>
         </span>
       </div>
 
