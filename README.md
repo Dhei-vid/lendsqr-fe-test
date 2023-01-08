@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Lendsqr Frontend Engineering Test - David Etuk
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
