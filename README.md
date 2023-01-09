@@ -11,7 +11,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### 'Important information about the Project'
+### `Important information about the Project`
 To view the relevant pages please use the links below after cloning the repository, installing packages using "npm install" or "yarn install" and runing the project with "npm start" or "yarn start".
 
 Login - http://localhost:3000/login
