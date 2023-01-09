@@ -21,7 +21,6 @@ User Details - http://localhost:3000/userdetails
 N/B
 
 Filter - Click on the filter icon to see the filter pop up form
-
 Status - Click on the status to see the status pop up
 
 Further info
