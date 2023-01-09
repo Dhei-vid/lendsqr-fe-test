@@ -174,7 +174,7 @@ const UserData = () => {
               ))
             ) : (
               <tr className='user-data-error-container'>
-                <td className='user-data-error'>No data</td>
+                <td className='user-data-error'>Loading...</td>
               </tr>
             )}
           </tbody>

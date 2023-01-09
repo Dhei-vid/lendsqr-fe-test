@@ -14,12 +14,7 @@ import UserData from './components/userData/userData.components'
 function App () {
   return (
     <Routes>
-      <Route path='login' element={<Login />} />
-      <Route path='nav' element={<Navigation />} />
-      <Route path='user' element={<Users />} />
-      <Route path='userdata' element={<UserData />} />
-      <Route path='filter' element={<Filter />} />
-      <Route path='status' element={<Status />} />
+      <Route path='/' element={<Login />} />
       <Route path='dashboard' element={<Dashboard />} />
       <Route path='userdetails' element={<UserDetails />} />
     </Routes>
