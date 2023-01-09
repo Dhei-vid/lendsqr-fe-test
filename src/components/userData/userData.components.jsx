@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import dateFormat from 'dateformat'
 
+import Pagination from '../pagination/pagination.component'
+import Filter from '../filter/filter.component'
+
 import { BiFilter } from 'react-icons/bi'
 import { RxDotsVertical } from 'react-icons/rx'
 
@@ -11,7 +14,9 @@ const UserData = () => {
   const [filter, setFilter] = useState(false)
 
   const onClickHandler = () => {
-    setFilter(true)
+    setFilter(!filter)
+
+    console.log(filter)
   }
 
   useEffect(() => {
@@ -164,6 +169,8 @@ const UserData = () => {
           </tbody>
         </table>
       </div>
+      <Pagination />
+      {filter ? <Filter /> : ''}
     </>
   )
 }
