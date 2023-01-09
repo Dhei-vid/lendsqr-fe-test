@@ -3,6 +3,7 @@ import dateFormat from 'dateformat'
 
 import Pagination from '../pagination/pagination.component'
 import Filter from '../filter/filter.component'
+import Status from '../../components/status/status.component'
 
 import { BiFilter } from 'react-icons/bi'
 import { RxDotsVertical } from 'react-icons/rx'
@@ -12,11 +13,18 @@ import './userData.styles.scss'
 const UserData = () => {
   const [data, setData] = useState(null)
   const [filter, setFilter] = useState(false)
+  const [status, setStatus] = useState(false)
 
-  const onClickHandler = () => {
+  const filterHandler = () => {
     setFilter(!filter)
 
     console.log(filter)
+  }
+
+  const statusHandler = () => {
+    setStatus(!status)
+
+    console.log('status ' + status)
   }
 
   useEffect(() => {
@@ -41,7 +49,9 @@ const UserData = () => {
 
   return (
     <>
+      {status ? <Status /> : ''}
       <div className='user-data-container'>
+        {filter ? <Filter /> : ''}
         <table>
           <thead>
             <tr className='data-heading-container'>
@@ -49,7 +59,7 @@ const UserData = () => {
                 Organization
                 <span className='data-heading-icon'>
                   <BiFilter
-                    onClick={onClickHandler}
+                    onClick={filterHandler}
                     className='data-icon'
                     size='20px'
                     style={{
@@ -64,7 +74,7 @@ const UserData = () => {
                 Username
                 <span className='data-heading-icon'>
                   <BiFilter
-                    onClick={onClickHandler}
+                    onClick={filterHandler}
                     className='data-icon'
                     size='20px'
                     style={{
@@ -79,7 +89,7 @@ const UserData = () => {
                 Email
                 <span className='data-heading-icon'>
                   <BiFilter
-                    onClick={onClickHandler}
+                    onClick={filterHandler}
                     className='data-icon'
                     size='20px'
                     style={{
@@ -94,7 +104,7 @@ const UserData = () => {
                 Phone Number
                 <span className='data-heading-icon'>
                   <BiFilter
-                    onClick={onClickHandler}
+                    onClick={filterHandler}
                     className='data-icon'
                     size='20px'
                     style={{
@@ -109,7 +119,7 @@ const UserData = () => {
                 Date Joined
                 <span className='data-heading-icon'>
                   <BiFilter
-                    onClick={onClickHandler}
+                    onClick={filterHandler}
                     className='data-icon'
                     size='20px'
                     style={{
@@ -124,7 +134,7 @@ const UserData = () => {
                 Status
                 <span className='data-heading-icon'>
                   <BiFilter
-                    onClick={onClickHandler}
+                    onClick={filterHandler}
                     className='data-icon'
                     size='20px'
                     style={{
@@ -152,6 +162,7 @@ const UserData = () => {
                     <div className='status pending'>Pending</div>
                     <div className='status-icon'>
                       <RxDotsVertical
+                        onClick={statusHandler}
                         size='20px'
                         style={{
                           cursor: 'pointer'
@@ -170,7 +181,6 @@ const UserData = () => {
         </table>
       </div>
       <Pagination />
-      {filter ? <Filter /> : ''}
     </>
   )
 }

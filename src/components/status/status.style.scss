@@ -1,4 +1,9 @@
 .status-container {
+  position: absolute;
+  top: 405px;
+  right: -30px;
+  z-index: 1;
+
   width: 170px;
   height: auto;
   background: #fff;

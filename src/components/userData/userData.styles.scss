@@ -4,7 +4,7 @@ table {
   border-collapse: collapse;
 }
 
-.data-heading-container {
+thead > .data-heading-container {
   position: relative;
 }
 
@@ -55,6 +55,7 @@ table {
   }
 
   .user-data-status-item {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
