@@ -11,9 +11,9 @@
   flex-direction: column;
   justify-content: space-around;
   //   margin: 10px auto;
-  max-width: 340px;
+  max-width: 280px;
   height: 600px;
-  padding: 10px 30px;
+  padding: 15px 30px;
 
   input,
   select {
@@ -45,5 +45,41 @@
     font-size: 14px;
     line-height: 16px;
     color: #545f7d;
+  }
+
+  .filter-button-container {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      width: 98px;
+      height: 40px;
+      border-radius: 8px;
+      border: 1px solid;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .reset-btn {
+      background: transparent;
+      color: #545f7d;
+
+      &:hover {
+        color: #fff;
+        background: #545f7d;
+      }
+    }
+
+    .filter-btn {
+      background: #39cdcc;
+      color: #fff;
+
+      &:hover {
+        color: #39cdcc;
+        background: transparent;
+      }
+    }
   }
 }

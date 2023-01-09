@@ -164,10 +164,6 @@ const UserData = () => {
           </tbody>
         </table>
       </div>
-      <div>
-        <span>Showing</span>
-        <span>Showing</span>
-      </div>
     </>
   )
 }

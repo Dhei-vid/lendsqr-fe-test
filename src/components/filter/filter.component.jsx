@@ -47,6 +47,11 @@ const Filter = () => {
             <option value='active'>Active</option>
           </select>
         </label>
+
+        <div className='filter-button-container'>
+          <button className='btn reset-btn'>Reset</button>
+          <button className='btn filter-btn'>Filter</button>
+        </div>
       </form>
     </div>
   )

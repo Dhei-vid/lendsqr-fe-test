@@ -167,6 +167,7 @@ div + .border-item {
     border-radius: 8px;
     width: 170px;
     height: 40px;
+    cursor: pointer;
 
     font-family: 'Work Sans';
     font-style: normal;
@@ -181,11 +182,21 @@ div + .border-item {
   .blacklist-btn {
     border: 1px solid #e4033b;
     color: #e4033b;
+
+    &:hover {
+      color: #fff;
+      background: #e4033b;
+    }
   }
 
   .active-btn {
     border: 1px solid #39cdcc;
     color: #39cdcc;
+
+    &:hover {
+      color: #fff;
+      background: #39cdcc;
+    }
   }
 }
 
