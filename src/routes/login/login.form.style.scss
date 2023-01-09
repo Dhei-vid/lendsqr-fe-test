@@ -83,3 +83,13 @@ form {
     opacity: 0.6;
   }
 }
+
+input {
+  position: relative;
+}
+
+.password-cta {
+  position: absolute;
+  right: 170px;
+  top: 340px;
+}
