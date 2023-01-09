@@ -23,8 +23,6 @@ const UserData = () => {
 
   const statusHandler = () => {
     setStatus(!status)
-
-    console.log('status ' + status)
   }
 
   useEffect(() => {
@@ -46,6 +44,8 @@ const UserData = () => {
 
     fetchData()
   }, [])
+
+  console.log(data)
 
   return (
     <>
