@@ -11,6 +11,23 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+### `Important information about the Project`
+To view the relevant pages please use the links below after cloning the repository, installing packages using "npm install" or "yarn install" and runing the project with "npm start" or "yarn start".
+
+Login - http://localhost:3000/login
+Dashboard - http://localhost:3000/dashboard
+User Details - http://localhost:3000/userdetails
+
+N/B
+
+Filter - Click on the filter icon to see the filter pop up form
+Status - Click on the status to see the status pop up
+
+Further info
+The pagination functionality has not been implemented due to lack of time. 
+
+Thank you
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
