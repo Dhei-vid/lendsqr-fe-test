@@ -7,10 +7,10 @@ const LogOut = () => {
   return (
     <div className='logout-container'>
       <div className='side-bar-item side-bar-items-container'>
-        <span className='side-bar-icons'>
+        <div className='side-bar-icons'>
           <FcSettings />
-        </span>
-        <span className='side-bar-title'> Systems Messages</span>
+        </div>
+        <div className='side-bar-title'> Systems Messages</div>
       </div>
 
       <ul className='logout-list'>

@@ -19,7 +19,7 @@
   }
 
   .side-bar-items-container {
-    height: 60px;
+    // height: auto;
 
     cursor: pointer;
     &:hover {
@@ -30,8 +30,8 @@
 
   .side-bar-item {
     display: flex;
-    align-items: center;
-    height: 60px;
+    align-content: flex-end;
+
     gap: 10px;
     padding: 0.4rem 2rem 4rem 2rem;
     color: #213f7d;
