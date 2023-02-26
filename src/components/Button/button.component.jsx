@@ -1,7 +1,9 @@
-import './button.styles.scss'
+import "./button.styles.scss";
 
 const Button = ({ children }) => (
-  <button className='button-container'>{children}</button>
-)
+  <button type="submit" className="button-container">
+    {children}
+  </button>
+);
 
-export default Button
+export default Button;
