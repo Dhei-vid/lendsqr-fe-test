@@ -14,5 +14,4 @@ function App() {
   );
 }
 
-// dbConnect();
 export default App;
