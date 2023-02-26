@@ -9,17 +9,17 @@ thead > .data-heading-container {
 }
 
 .user-data-container {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-size: 12px;
   line-height: 14px;
-  text-align: start;
+  text-align: flex-start;
   color: #545f7d;
   background: #fff;
   border-radius: 4px;
   padding: 1rem;
 
   .data-headings {
-    text-align: start;
+    text-align: flex-start;
     text-transform: uppercase;
   }
 
@@ -29,7 +29,7 @@ thead > .data-heading-container {
 
   .user-data-item {
     padding: 1rem 0.2rem;
-    text-align: start;
+    text-align: flex-start;
     overflow-wrap: break-word;
   }
 

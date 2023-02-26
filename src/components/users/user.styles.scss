@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: #213f7d;
   gap: 15px;
 
@@ -21,7 +21,7 @@
       display: flex;
       margin: 1.3rem 0 0 1.3rem;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       gap: 8px;
 
       .user-text {
