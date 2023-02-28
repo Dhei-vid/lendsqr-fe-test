@@ -12,25 +12,7 @@ import "./login.form.style.scss";
 import logo from "../../assets/lendsqr_logo1.png";
 import logoImage from "../../assets/pablo-sign-in.png";
 
-const LoginUser = async (email, password) => {
-  axios
-    .post("http://localhost:8080/login", {
-      email,
-      password,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-    .then((response) => {
-      if (response.data.accessToken) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-
-      return response.data;
-    });
-};
-
-const Login = ({ setToken }) => {
+const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -42,14 +24,6 @@ const Login = ({ setToken }) => {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const token = await LoginUser(email, password);
-
-  //   setToken(token);
-  // };
 
   return (
     <Formik
@@ -66,8 +40,6 @@ const Login = ({ setToken }) => {
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          // handleSubmit();
-          // alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
           navigate("/dashboard");
         }, 400);
