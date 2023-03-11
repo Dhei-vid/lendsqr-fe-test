@@ -19,7 +19,8 @@ thead > .data-heading-container {
   padding: 1rem;
 
   .data-headings {
-    text-align: flex-start;
+    // text-align: flex-start;
+    text-align: left;
     text-transform: uppercase;
   }
 
@@ -28,8 +29,8 @@ thead > .data-heading-container {
   }
 
   .user-data-item {
-    padding: 1rem 0.2rem;
-    text-align: flex-start;
+    padding: 1rem 0rem;
+    text-align: left;
     overflow-wrap: break-word;
   }
 
